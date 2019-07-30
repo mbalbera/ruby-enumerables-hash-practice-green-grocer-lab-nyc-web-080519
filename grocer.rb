@@ -12,19 +12,19 @@ def consolidate_cart(cart)
   hash
 end
 
-def consolidate_coupons(coupons)
-  hash = {}
-  coupons.each do |c|
-    c.each do |name, price_hash|
-      if hash[name].nil?
-        hash[name] = price_hash.merge({:count => 1})
-      else
-        hash[name][:count] += 1
-      end
-    end
-  end
-  hash
-end
+# def consolidate_coupons(coupons)
+#   hash = {}
+#   coupons.each do |c|
+#     c.each do |name, price_hash|
+#       if hash[name].nil?
+#         hash[name] = price_hash.merge({:count => 1})
+#       else
+#         hash[name][:count] += 1
+#       end
+#     end
+#   end
+#   hash
+# end
 
 def apply_coupons(cart, coupons)
   coupons.each do |c|
